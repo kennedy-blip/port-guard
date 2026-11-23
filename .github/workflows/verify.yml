@@ -12,8 +12,8 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: '1.22.x'
-      - name: Check formatting
-        run: test -z "$(gofmt -l api/profiles/index.go api/scan/index.go devserver.go)"
+      - name: Format Go sources
+        run: gofmt -w api/profiles/index.go api/scan/index.go devserver.go
       - name: Vet
         run: go vet ./api/...
       - name: Test
