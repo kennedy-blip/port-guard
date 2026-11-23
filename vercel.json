@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "buildCommand": "",
+  "outputDirectory": "public",
+  "functions": {
+    "api/profiles/index.go": { "runtime": "go1.x" },
+    "api/scan/index.go": { "runtime": "go1.x" }
+  },
+  "rewrites": [
+    { "source": "/api/profiles", "destination": "/api/profiles" },
+    { "source": "/api/scan", "destination": "/api/scan" },
+    { "source": "/", "destination": "/index.html" }
+  ]
+}
